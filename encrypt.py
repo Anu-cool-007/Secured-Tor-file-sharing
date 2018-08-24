@@ -3,6 +3,7 @@ from Crypto.PublicKey import RSA
 from Crypto import Random
 
 
+
 def aes_encrypt(data: bytes):
     random_gen = Random.new()
     key = random_gen.read(AES.block_size)

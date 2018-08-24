@@ -1,0 +1,1 @@
+python -m PyQt5.uic.pyuic DesignWindow.ui > Ui_DesignWindow.py
