@@ -1,6 +1,6 @@
 import os
 import sys
-from PyQt5 import QtWidgets, uic, QtGui, QtCore
+from PyQt5 import QtWidgets, uic
 
 from Ui_DesignWindow import Ui_MainWindow
 from serve_ui import Ui_Form
@@ -8,19 +8,6 @@ from serve_ui import Ui_Form
 from torshare import TorShare
 import encrypt
 import decrypt
-
-import logging
-
-
-class QPlainTextEditLogger(logging.Handler):
-    def __init__(self, parent):
-        super().__init__()
-        self.widget = QtGui.QPlainTextEdit(parent)
-        self.widget.setReadOnly(True)
-
-    def emit(self, record):
-        msg = self.format(record)
-        self.widget.appendPlainText(msg)
 
 
 class ServeFile(QtWidgets.QWidget, Ui_MainWindow):
@@ -43,14 +30,6 @@ class ServeFile(QtWidgets.QWidget, Ui_MainWindow):
 class Window(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-
-        logTextBox = QPlainTextEditLogger(self)
-        # You can format what is printed to text box
-        logTextBox.setFormatter(logging.Formatter(
-            '%(asctime)s - %(levelname)s - %(message)s'))
-        logging.getLogger().addHandler(logTextBox)
-        # You can control the logging level
-        logging.getLogger().setLevel(logging.DEBUG)
 
         self.setupUi(self)
 
