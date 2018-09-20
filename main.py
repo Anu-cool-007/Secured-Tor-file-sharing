@@ -9,6 +9,18 @@ from torshare import TorShare
 import encrypt
 import decrypt
 
+import logging
+
+
+class QPlainTextEditLogger(logging.Handler):
+    def __init__(self, parent):
+        super().__init__()
+        parent.plainTextEdit_2.setReadOnly(True)
+
+    def emit(self, record):
+        msg = self.format(record)
+        parent.plainTextEdit_2.appendPlainText(msg)
+
 
 class ServeFile(QtWidgets.QWidget, Ui_MainWindow):
     def __init__(self, url, torsh):
@@ -33,8 +45,13 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.setupUi(self)
 
-        self.torsh = TorShare()
+        logTextBox = QPlainTextEditLogger(self)
+        logTextBox.setFormatter(logging.Formatter(
+            '%(asctime)s - %(levelname)s - %(message)s'))
+        logging.getLogger().addHandler(logTextBox)
 
+        logging.getLogger().setLevel(logging.INFO)
+        self.torsh = TorShare()
         self.browseBtn.clicked.connect(self.get_filepath)
         self.encryptBtn.clicked.connect(self.encrypt_file)
         self.serveBtn.clicked.connect(self.tor_share)
@@ -49,6 +66,7 @@ class Window(QtWidgets.QMainWindow, Ui_MainWindow):
         print(filename)
         if self.Tabs.currentIndex() == 0:
             self.lineEdit.setText(filename[0])
+            logging.info('File Added')
         elif self.Tabs.currentIndex() == 1:
             self.lineEdit_2.setText(filename[0])
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/media/anu/E P I C    S T U F F F/Academics/Fall sem 2018-2019/Network Security/Project/tor_file/DesignWindow.ui'
+# Form implementation generated from reading ui file 'DesignWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.2
 #
@@ -15,7 +15,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.Tabs = QtWidgets.QTabWidget(self.centralwidget)
-        self.Tabs.setGeometry(QtCore.QRect(10, 0, 751, 581))
+        self.Tabs.setGeometry(QtCore.QRect(10, 0, 751, 361))
         self.Tabs.setObjectName("Tabs")
         self.encryptTab = QtWidgets.QWidget()
         self.encryptTab.setObjectName("encryptTab")
@@ -37,12 +37,6 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(self.encryptTab)
         self.label_2.setGeometry(QtCore.QRect(10, 60, 121, 16))
         self.label_2.setObjectName("label_2")
-        self.textBrowser = QtWidgets.QTextBrowser(self.encryptTab)
-        self.textBrowser.setGeometry(QtCore.QRect(10, 360, 721, 192))
-        self.textBrowser.setObjectName("textBrowser")
-        self.label_3 = QtWidgets.QLabel(self.encryptTab)
-        self.label_3.setGeometry(QtCore.QRect(10, 340, 47, 10))
-        self.label_3.setObjectName("label_3")
         self.pub_key = QtWidgets.QPlainTextEdit(self.encryptTab)
         self.pub_key.setGeometry(QtCore.QRect(10, 80, 731, 211))
         self.pub_key.setObjectName("pub_key")
@@ -61,12 +55,6 @@ class Ui_MainWindow(object):
         self.encryptBtn_2 = QtWidgets.QPushButton(self.decryptTab)
         self.encryptBtn_2.setGeometry(QtCore.QRect(10, 300, 731, 23))
         self.encryptBtn_2.setObjectName("encryptBtn_2")
-        self.textBrowser_2 = QtWidgets.QTextBrowser(self.decryptTab)
-        self.textBrowser_2.setGeometry(QtCore.QRect(10, 360, 721, 192))
-        self.textBrowser_2.setObjectName("textBrowser_2")
-        self.label_6 = QtWidgets.QLabel(self.decryptTab)
-        self.label_6.setGeometry(QtCore.QRect(10, 340, 47, 10))
-        self.label_6.setObjectName("label_6")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.decryptTab)
         self.lineEdit_2.setGeometry(QtCore.QRect(10, 30, 641, 21))
         self.lineEdit_2.setObjectName("lineEdit_2")
@@ -74,9 +62,15 @@ class Ui_MainWindow(object):
         self.pub_key_2.setGeometry(QtCore.QRect(10, 80, 731, 211))
         self.pub_key_2.setObjectName("pub_key_2")
         self.Tabs.addTab(self.decryptTab, "")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(20, 370, 47, 20))
+        self.label_3.setObjectName("label_3")
+        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.plainTextEdit_2.setGeometry(QtCore.QRect(20, 400, 731, 181))
+        self.plainTextEdit_2.setObjectName("plainTextEdit_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 772, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 772, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -84,7 +78,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.Tabs.setCurrentIndex(0)
+        self.Tabs.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -95,12 +89,11 @@ class Ui_MainWindow(object):
         self.serveBtn.setText(_translate("MainWindow", "Serve on Tor"))
         self.label.setText(_translate("MainWindow", "Browse File:"))
         self.label_2.setText(_translate("MainWindow", "Enter Public Key:"))
-        self.label_3.setText(_translate("MainWindow", "Log:"))
         self.Tabs.setTabText(self.Tabs.indexOf(self.encryptTab), _translate("MainWindow", "Encryption"))
         self.browseBtn_2.setText(_translate("MainWindow", "Browse"))
         self.label_4.setText(_translate("MainWindow", "Enter Private Key:"))
         self.label_5.setText(_translate("MainWindow", "Browse File:"))
         self.encryptBtn_2.setText(_translate("MainWindow", "Decrypt the File"))
-        self.label_6.setText(_translate("MainWindow", "Log:"))
         self.Tabs.setTabText(self.Tabs.indexOf(self.decryptTab), _translate("MainWindow", "Decrypt"))
+        self.label_3.setText(_translate("MainWindow", "Log:"))
 

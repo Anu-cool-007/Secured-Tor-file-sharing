@@ -20,11 +20,11 @@
       <x>10</x>
       <y>0</y>
       <width>751</width>
-      <height>581</height>
+      <height>361</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="encryptTab">
      <attribute name="title">
@@ -105,29 +105,6 @@
        <string>Enter Public Key:</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>360</y>
-        <width>721</width>
-        <height>192</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>340</y>
-        <width>47</width>
-        <height>10</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Log:</string>
-      </property>
-     </widget>
      <widget class="QPlainTextEdit" name="pub_key">
       <property name="geometry">
        <rect>
@@ -195,29 +172,6 @@
        <string>Decrypt the File</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>360</y>
-        <width>721</width>
-        <height>192</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_6">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>340</y>
-        <width>47</width>
-        <height>10</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Log:</string>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="lineEdit_2">
       <property name="geometry">
        <rect>
@@ -240,6 +194,29 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>370</y>
+      <width>47</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Log:</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>400</y>
+      <width>731</width>
+      <height>181</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -247,7 +224,7 @@
      <x>0</x>
      <y>0</y>
      <width>772</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
